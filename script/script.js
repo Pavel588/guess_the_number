@@ -6,7 +6,6 @@ function isNumber(number) {
 
 function game() {
     const randomNumber = Math.ceil(Math.random() * 100) + 1;
-    console.log(randomNumber);
     function gameRandomNumber() {
         const answer = prompt('Угадай число от 1 до 100');
 
@@ -24,9 +23,6 @@ function game() {
             gameRandomNumber();
         } else if (answer == randomNumber) {
             return alert('Поздравляю, Вы угадали!!!');
-        } else if (!isNumber(answer) || answer > 100 || answer < 0) {
-            alert('Введите число!');
-            gameRandomNumber();
         } else {
             alert('Что-то пошло не так');
             return;
